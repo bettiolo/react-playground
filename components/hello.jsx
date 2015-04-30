@@ -1,7 +1,13 @@
 window.Hello = React.createClass({
+  getInitialState : function() {
+    return { name: 'world' };
+  },
   render : function() {
     return(
-      <h1>Hello, world!</h1>
+      <div>
+        <h1>Hello, {this.state.name}!</h1>
+        <input type="text" />
+      </div>
     );
   }
 });
