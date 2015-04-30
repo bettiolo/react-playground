@@ -1,4 +1,9 @@
-React.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('example')
-);
+window.Hello = React.createClass({
+  render : function() {
+    return(
+      <h1>Hello, world!</h1>
+    );
+  }
+});
+
+// module.exports = Hello;
