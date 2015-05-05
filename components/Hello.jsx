@@ -1,12 +1,15 @@
 window.Hello = React.createClass({
-  getInitialState : function() {
+  getInitialState: function() {
     return { name: 'world' };
   },
-  render : function() {
+  handleChange: function(event) {
+    this.setState({ name: event.target.value });
+  },
+  render: function() {
     return(
       <div>
         <h1>Hello, {this.state.name}!</h1>
-        <input type="text" />
+        <input type="text" value={this.state.name} onChange={this.handleChange} />
       </div>
     );
   }
