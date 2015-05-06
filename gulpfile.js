@@ -10,7 +10,7 @@ let source = require('vinyl-source-stream');
 let sourcemaps = require('gulp-sourcemaps');
 let uglify = require('gulp-uglify');
 
-const reactApp = './components/app.jsx';
+const reactApp = './components/_bootstrap-client.jsx';
 const bundle = 'bundle.js';
 const baseDestination = './dist/';
 const jsDestination = './dist/js/';
