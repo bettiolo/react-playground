@@ -15,3 +15,4 @@ My very personal opinionated Isomorphic React Golden Setup
 Todo:
 - Run ESLint from gulp
 - Configure browserify-shim from gulp
+- Better understand [error handling in gulp](https://github.com/gulpjs/gulp/blob/master/docs/recipes/combining-streams-to-handle-errors.md)
