@@ -11,11 +11,6 @@
     "build": "npm run lint && node --harmony ./node_modules/gulp/bin/gulp.js build",
     "lint": "eslint --ext .js,.jsx ./"
   },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
   "browserify-shim": {
     "react": "global:React"
   },
