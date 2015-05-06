@@ -10,9 +10,11 @@ let sourcemaps = require('gulp-sourcemaps');
 let uglify = require('gulp-uglify');
 
 const reactApp = './components/app.jsx';
-const destination = './dist';
+const bundle = 'bundle.js';
+const baseDestination = 'dist/';
+const jsDestination = 'dist/js/';
 
-gulp.task('clean', (cb) => del([ 'dist/'], cb));
+gulp.task('clean', (cb) => del([ baseDestination ], cb));
 
 gulp.task('browserify', ['clean'], () => {
   let bundler = browserify({
@@ -22,17 +24,17 @@ gulp.task('browserify', ['clean'], () => {
   return bundler
     .require(reactApp, { entry: true }) // React app's entry point
     .bundle() // generates a single stream with inline source maps
-    .pipe(source('bundle.js')) // bundled output file name
-    .pipe(gulp.dest(destination)); // write minimised file and source maps to disk
+    .pipe(source(bundle)) // bundled output file name
+    .pipe(gulp.dest(jsDestination)); // write minimised file and source maps to disk
 });
 
 gulp.task('minify', ['browserify'], () => {
-  gulp.src('./dist/bundle.js')
+  gulp.src(jsDestination + bundle)
     .pipe(sourcemaps.init({ loadMaps: true })) // load existing source maps
       .pipe(uglify()) // minimise bundled file
       .pipe(rename({ extname: '.min.js' }))
     .pipe(sourcemaps.write('./')) // create source maps
-    .pipe(gulp.dest(destination)); // write minimised file and source maps to disk
+    .pipe(gulp.dest(jsDestination)); // write minimised file and source maps to disk
 });
 
 gulp.task('build', ['browserify', 'minify']);
