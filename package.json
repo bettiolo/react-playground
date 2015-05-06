@@ -1,18 +1,24 @@
 {
   "name": "react-playground",
   "version": "0.0.1",
+  "description": "My very personal opinionated Isomorphic React Golden Setup",
+  "author": "Marco Bettiolo <marco@bettiolo.it>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bettiolo/react-playground"
+  },
   "scripts": {
-    "start": "node --harmony ./node_modules/gulp/bin/gulp.js build"
+    "build": "node --harmony ./node_modules/gulp/bin/gulp.js build"
   },
   "devDependencies": {
     "babelify": "^6.0.2",
     "browserify": "^10.1.0",
-    "exorcist": "^0.3.0",
     "gulp": "^3.8.11",
-    "gulp-babel": "^5.1.0",
-    "gulp-concat": "^2.5.2",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
+    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
-  }
+  },
+  "analyze": true,
+  "license": "MIT"
 }
