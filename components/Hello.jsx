@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default React.createClass({
   getInitialState() {
     return { name: 'world' };
@@ -6,7 +8,7 @@ export default React.createClass({
     this.setState({ name: event.target.value });
   },
   render() {
-    return(
+    return (
       <div>
         <h1>Hello, {this.state.name}!</h1>
         <input type="text" value={this.state.name} onChange={this.handleChange} />

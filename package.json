@@ -8,13 +8,20 @@
     "url": "https://github.com/bettiolo/react-playground"
   },
   "scripts": {
-    "build": "node --harmony ./node_modules/gulp/bin/gulp.js build",
+    "build": "npm run lint && node --harmony ./node_modules/gulp/bin/gulp.js build",
     "lint": "eslint --ext .js,.jsx ./"
+  },
+  "browserify": {
+    "transform": [ "browserify-shim" ]
+  },
+  "browserify-shim": {
+    "react": "global:React"
   },
   "devDependencies": {
     "babel-eslint": "^3.0.1",
     "babelify": "^6.0.2",
     "browserify": "^10.1.0",
+    "browserify-shim": "^3.8.6",
     "eslint": "^0.20.0",
     "gulp": "^3.8.11",
     "gulp-sourcemaps": "^1.5.2",
