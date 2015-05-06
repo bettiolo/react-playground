@@ -6,16 +6,13 @@ let del = require('del');
 let browserify = require('browserify');
 let babelify = require('babelify');
 let source = require('vinyl-source-stream');
-let buffer = require('vinyl-buffer');
 let sourcemaps = require('gulp-sourcemaps');
 let uglify = require('gulp-uglify');
 
 const reactApp = './components/app.jsx';
 const destination = './dist';
 
-gulp.task('clean', (cb) => {
-  del([ 'dist/'], cb);
-});
+gulp.task('clean', (cb) => del([ 'dist/'], cb));
 
 gulp.task('browserify', ['clean'], () => {
   let bundler = browserify({
