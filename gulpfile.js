@@ -1,4 +1,5 @@
-'use strict'; //eslint-disable-line strict
+/*eslint-disable no-console, strict */
+'use strict';
 let gulp = require('gulp');
 let browserify = require('browserify');
 let babelify = require('babelify');
