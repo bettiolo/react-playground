@@ -12,7 +12,9 @@
     "lint": "eslint --ext .js,.jsx ./"
   },
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browserify-shim": {
     "react": "global:React"
