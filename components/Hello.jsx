@@ -1,4 +1,4 @@
-window.Hello = React.createClass({
+export default React.createClass({
   getInitialState() {
     return { name: 'world' };
   },
@@ -14,5 +14,3 @@ window.Hello = React.createClass({
     );
   }
 });
-
-// module.exports = Hello;
