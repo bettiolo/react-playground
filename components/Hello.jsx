@@ -1,11 +1,11 @@
 window.Hello = React.createClass({
-  getInitialState: function() {
+  getInitialState() {
     return { name: 'world' };
   },
-  handleChange: function(event) {
+  handleChange(event) {
     this.setState({ name: event.target.value });
   },
-  render: function() {
+  render() {
     return(
       <div>
         <h1>Hello, {this.state.name}!</h1>
