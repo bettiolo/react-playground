@@ -1,4 +1,4 @@
-/*eslint-disable no-console, strict */
+/*eslint-disable strict */
 'use strict';
 let gulp = require('gulp');
 let rename = require('gulp-rename');
