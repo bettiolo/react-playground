@@ -3,6 +3,7 @@ react-playground
 
 My very personal opinionated Isomorphic React Golden Setup
 
+- Isomorphic React via express + babel
 - React component dependencies resolved using ES6 modules
 - Browser bundling via browserify
 - CDN dependencies' shim via browserify-shim
@@ -11,6 +12,7 @@ My very personal opinionated Isomorphic React Golden Setup
 - JSX Source maps working with the minified bundles via gulp-sourcemaps
 - Linted via eslint + babel-eslint
 - Tasks via gulp
+- Event loop blocked checks via blocked
 
 Todo:
 - Run ESLint from gulp
