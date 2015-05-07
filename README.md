@@ -18,3 +18,4 @@ Todo:
 - Run ESLint from gulp
 - Configure browserify-shim from gulp
 - Better understand [error handling in gulp](https://github.com/gulpjs/gulp/blob/master/docs/recipes/combining-streams-to-handle-errors.md)
+- Explore webpack and webpack-dev-server with hot loading
