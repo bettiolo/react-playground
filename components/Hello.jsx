@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default React.createClass({
+export let Hello = React.createClass({
   getInitialState() {
     return { name: 'world' };
   },
