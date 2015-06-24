@@ -1,0 +1,10 @@
+.idea/
+.DS_Store/
+dist/
+node_modules/
+coverage/
+npm-debug.log
+
+.git/
+Makefile
+.dockerignore
